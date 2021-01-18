@@ -28,3 +28,6 @@ Shorter version:
 ```javascript
 const squareAndFindEvens = numbers => numbers.map(num => num**2).filter(square => square % 2 === 0);
 ```
+
+## 10.4 Rest and Spread Exercises
+See rest-spread.js
