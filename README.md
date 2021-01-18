@@ -31,3 +31,43 @@ const squareAndFindEvens = numbers => numbers.map(num => num**2).filter(square =
 
 ## 10.4 Rest and Spread Exercises
 See rest-spread.js
+
+## 10.5 Object Enhancements
+Same keys and values:
+```javascript
+function createInstructor(firstName, lastName){
+  return {
+    firstName, lastName
+  }
+}
+```
+Computed property names:
+```javascript
+const instructor = {
+    firstname: "Colt',
+    [favoriteNumber]: "That is my favorite!"
+}
+```
+Object methods:
+```javascript
+var instructor = {
+  firstName: "Colt",
+  sayHi() {
+    return "Hi!";
+  },
+  sayBye() {
+    return this.firstName + " says bye!";
+  }
+}
+```
+createAnimal function
+```javascript
+function createAnimal(species, verb, noise){
+    return {
+        species,
+        [verb]() {
+            console.log(noise);
+        }
+    }
+}
+```
