@@ -111,3 +111,29 @@ arr = [arr[1], arr[0]];
 ```javascript
 const raceResults = ([first, second, third, ...rest]) => ({first, second, third, rest});
 ```
+## 10.7 Maps and Sets
+- Quick Question 1
+    + Set(4) \[1,2,3,4 \]
+- Quick Question 2
+    + 'ref'
+- Quick Question 3
+    + Map(2) {\[1,2,3] => true, \[1,2,3] => false}
+- Has Duplicate
+```javascript
+function hasDuplicate(arr) {
+    return arr.length != [...new Set(arr)].length
+}
+```
+- Vowel Count
+```javascript
+function vowelCount(str) {
+    const vowelSet = new Set('aeiou');
+    const vowelMap = new Map();
+    [...str].filter(char => vowelSet.has(char)).forEach(vowel => {
+        let total;
+        vowelMap.get(vowel) === undefined ? total = 1 : total = vowelMap.get(vowel) + 1;
+        vowelMap.set(vowel, total);
+    });
+    return vowelMap;
+}
+```
